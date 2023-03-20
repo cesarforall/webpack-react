@@ -12,7 +12,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: './bundle.js',
-		publicPath: '/',
+		// publicPath: '/',
 	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
@@ -44,6 +44,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
 			filename: './index.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/test.html',
+			filename: './test.html',
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
